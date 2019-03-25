@@ -1,6 +1,6 @@
 clear()
 load 'Orig.mat'
-iter = 2;
+iter = 10;
 stf_time = zeros(iter,1);
 stf_mem = zeros(iter,1);
 dij_mem = zeros(iter,1);
@@ -19,7 +19,7 @@ for i = 1:iter
     a= whos(); %lists all varibles
     %start_mem(i)=sum([a(:).bytes])
     %Varible Para
-    pln.propStf.bixelWidth      = 10*i;
+    pln.propStf.bixelWidth      = 2*i;
     bixel_width_arr(i) = pln.propStf.bixelWidth 
     pln.propStf.gantryAngles    = [0]; 
     pln.propStf.couchAngles     = [0]; 
